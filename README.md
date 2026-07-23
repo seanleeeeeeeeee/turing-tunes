@@ -1,10 +1,11 @@
 # turing-tunes
 Digital guitar FX processor. Generates trippy audio-reactive organic visuals ([Turing patterns!](https://visualpde.com/visual-stories/turing-morphogenesis.html) by running a reaction-diffusion simulation. Also fits on 2 credit cards.
+This repo 
 
 ### Parts
-<p>- PCB, manufacturing files [here](pcb) <img align="center" height="90" alt="screencap_kicad" src="https://github.com/user-attachments/assets/40edcba1-787c-4db7-a4d3-bc827588cc30"> <p/>
-<p>- ST7735 - LCD display (SPI 128x160) <img align="center" height="100" alt="Subject" src="https://github.com/user-attachments/assets/f29ef42a-52c1-469d-a7eb-4b10f357b1b5"><p/>
-<p>- ESP32-S3-WROOM - signal processing, lcd driver <img align="center" height="80" alt="IMG_2622" src="https://github.com/user-attachments/assets/6e0118fd-2739-4b50-9670-155551c593d6" />
+<p>• PCB, manufacturing files [here](pcb) <img align="center" height="90" alt="screencap_kicad" src="https://github.com/user-attachments/assets/40edcba1-787c-4db7-a4d3-bc827588cc30"> <p/>
+<p>• ST7735 - LCD display (SPI 128x160) <img align="center" height="100" alt="Subject" src="https://github.com/user-attachments/assets/f29ef42a-52c1-469d-a7eb-4b10f357b1b5"><p/>
+<p>• ESP32-S3-WROOM - signal processing, lcd driver <img align="center" height="80" alt="IMG_2622" src="https://github.com/user-attachments/assets/6e0118fd-2739-4b50-9670-155551c593d6" />
 <p/>
 
 - WM8960 - audio codec (i2s)
