@@ -2,49 +2,21 @@
 Digital guitar FX processor. Generates trippy audio-reactive organic visuals ([Turing patterns!](https://visualpde.com/visual-stories/turing-morphogenesis.html) by running a reaction-diffusion simulation. Barely larger than an Altoids tin.
 
 Repo contents:
-videos (below)
-[parts list](parts.md)
-[software guide](software.md)
-[known issues](issues.md)
+- videos (below)
+- [parts list](parts.md)
+- [software guide](software.md)
+- [known issues](issues.md)
+- [manufacturing files](schematics)
 
 
-## videos of the prototype
+## Videos of the prototype
+(control-click to open a new tab)
+
+UI Demo:
 [![UI Demo](https://github.com/user-attachments/assets/39b6de4e-4714-4edc-9056-6ee880435924)](https://youtu.be/-QIagq8TpTg)
+
+Fuzz + chorus + reverb:
 [![Fuzz + chorus + reverb](https://github.com/user-attachments/assets/42752a0b-dc29-4ef1-ba81-67b604a5c642)](https://youtu.be/kHxl3G4F7Ko)
+
+Delay + reverb + bitcrush:
 [![Delay + reverb + bitcrush](https://github.com/user-attachments/assets/83ef74a8-c052-498c-b49b-2c4542329da3)](https://youtu.be/CMxEhY_DuVc)
-
-
-
-
-### Parts
-<p>• PCB, manufacturing files [here](pcb) <img align="center" height="90" alt="screencap_kicad" src="https://github.com/user-attachments/assets/40edcba1-787c-4db7-a4d3-bc827588cc30"> <p/>
-<p>• ST7735 - LCD display (SPI 128x160) <img align="center" height="100" alt="Subject" src="https://github.com/user-attachments/assets/f29ef42a-52c1-469d-a7eb-4b10f357b1b5"><p/>
-<p>• ESP32-S3-WROOM - signal processing, lcd driver <img align="center" height="80" alt="IMG_2622" src="https://github.com/user-attachments/assets/6e0118fd-2739-4b50-9670-155551c593d6" />
-<p/>
-
-- WM8960 - audio codec (i2s)
-- Limit switch - footswitch
-- 6.35mm audio jacks x2 - amplifier send and receive
-- Analog [joystick](code/stick.h)(2D)
-- Caps on power rails (opt.)
-
-### Hardware Setup
-[Schematic diagram](schematics)
-A board costs about $CAD in materials as of 2026.
-| ------------- | ------------- |
-| IC modules  | CAD  |
-| Passives  | CAD  |
-| JLCPCB  | CAD  |
-
-### Software Setup
-The code should be built and flashed with ESP-IDF, resulting in a binary ~333kb in size.
-```
-$ git clone https://github.com/seanleeeeeeeeee/turing-tunes/
-cd code
-source ~/esp/esp-idf/export.sh          //or equivalent
-idf.py set-target esp32s3
-idf.py build flash monitor
-```
-### Known Issues
-- WM8960 registers inconsistently send the i2c acknowledge bit. the program must stall and retry several times when initializing these, but only at startup. in addition, master volume changes take delayed effect.
-- Signal-to-noise ratio is mediocre (shielding?)
