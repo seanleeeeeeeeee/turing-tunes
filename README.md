@@ -1,5 +1,5 @@
 # turing-tunes
-Digital guitar FX processor. Generates trippy audio-reactive organic visuals ([Turing patterns!](https://visualpde.com/visual-stories/turing-morphogenesis.html) by running a reaction-diffusion simulation. Barely larger than an Altoids tin.
+Digital guitar FX processor. Generates trippy audio-reactive organic visuals ([Turing patterns!](https://visualpde.com/visual-stories/turing-morphogenesis.html) by running a reaction-diffusion simulation. Larger than an Altoids tin (but just barely).
 
 <img width="1440" height="900" alt="screencap_kicad" src="https://github.com/user-attachments/assets/12761682-d351-45ac-8d70-cfdda4c3a7ac" />
 
